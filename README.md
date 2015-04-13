@@ -1,7 +1,10 @@
 # Synappcss
 Scientimagically compile jade/sass(bourbon/neat) &amp; optimise images with the help of gulp. Pleeease flavored.
 
-FUNCTIONS :
+## Note :
+Github seems to be annoying with tabs, but you can append ?ts=2 or ?ts=4 to the URL to change the tab-size. For example : https://github.com/labo-css/Synappcss/blob/master/dev/sass/style.sass?ts=2
+
+## CLI
 - **gulp clean:prod** = clean the prod folder (sometimes you will need this, trust me)
 - **gulp clean:dev** = just joking, are u a masochist?
 - **gulp zip:prod** = zip the prod folder
