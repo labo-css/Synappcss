@@ -1,0 +1,27 @@
+{
+  "name": "Synappcss",
+  "version": "0.0.1",
+  "description": "I don't want to describe it, too lazy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Paillard | labo-css.fr",
+  "license": "ISC (not my idea, npm one)",
+  "devDependencies": {
+    "browser-sync": "^2.6.1",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jade": "^1.0.0",
+    "gulp-pleeease": "^1.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "gulp-zip": "^3.0.2",
+    "node-bourbon": "^4.2.1-beta1",
+    "node-neat": "^1.7.1-beta1"
+  }
+}
