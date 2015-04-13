@@ -27,11 +27,13 @@ Scientimagically compile jade/sass(bourbon/neat) &amp; optimise images with the 
 - for example : merge the vanilla js with the compiler coffeescript without crashing everything
 
 ## Note :
+
+Still learning git/github but i figured out this : 
+
 Github seems to be annoying with tabs, but you can append ?ts=2 or ?ts=4 to the URL to change the tab-size. For example : https://github.com/labo-css/Synappcss/blob/master/dev/sass/style.sass?ts=2
 OR: https://userstyles.org/styles/userjs/70979/GitHub%3A%20better-sized%20tabs%20in%20code.user.js?ik-defaultsize=ik-2&ik-rubysize=ik-2&.user.js install this with greasemonkey
 
 Also, i'm french so if you are... ce ne sera pas la peine de s'embêter à parler anglais.
-Still learning git.
 
 Thats all !
 
