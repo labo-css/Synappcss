@@ -1,0 +1,17 @@
+//- header
+head
+	meta(charset="UTF-8")
+	| <!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	title #{SiteTitle}
+	meta(name="description", content=MetaDesc)
+	meta(name="generator", content="Synappcss")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+	| <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>      <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script><![endif]-->
+	block stylesheets
+		link(rel="stylesheet", href="css/style.css")
+	//- Load fonts from Google Fonts only if font names are specified in the config
+	if GoogleFonts
+		link(href='//fonts.googleapis.com/css?family=' + GoogleFonts, rel='stylesheet', type='text/css')
+	//- Load jQuery only if switched on in config
+	if jQuery
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')

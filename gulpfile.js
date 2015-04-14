@@ -59,7 +59,7 @@ gulp.task('zip:dev', function (){
 // Compile jade files
 
 gulp.task('jade', function(){
-	return gulp.src('./dev/jade/**/*.jade')
+	return gulp.src('./dev/pages/**/*.jade')
 		.pipe(jade({
 			pretty: true //jade is indeed pretty as hell
 		}))
@@ -138,7 +138,7 @@ gulp.task('default', ['jade', 'sass', 'coffee', 'js', 'img'], function(){})
 // Watch da booty
 
 gulp.task('watch',['browser-sync'], function(){
-	gulp.watch('./dev/jade/**/*.jade', ['jade']).on('change', function(event){
+	gulp.watch(['./dev/pages/**/*.jade', './dev/jade/**/*.jade'], ['jade']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
 		gutil.log('This', gutil.colors.bgRed('JADE template'), 'look really cool!')
 	})

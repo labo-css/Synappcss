@@ -1,0 +1,28 @@
+//- The layout wrapper this page will use
+extends ../jade/layouts/default
+
+//- Override the default configuration file
+append config
+	- var PageTitle = "Index pagetitle"
+	- var MetaDesc = "Index metadesc"
+
+//- To add more stylesheets to this page, append some.
+append stylesheets
+
+//- Actual content ***********************************
+block content
+	h1 #{PageTitle}
+	ul
+		li: a(href="") test
+		li: a(href="") test
+	p
+	| You can write
+	strong  content 
+	| like this
+	br
+	| and break lines...
+	p.jquerytest Jquery is not working :(
+	script.
+		if (window.jQuery) {
+			$('.jquerytest').html("jQuery is working ! YAY !");
+		}

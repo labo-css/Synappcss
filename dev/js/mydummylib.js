@@ -1,1 +1,0 @@
-document.getElementById("testjs").innerHTML = 5 + 12;

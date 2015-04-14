@@ -1,20 +1,55 @@
+// Importation des librairies
 @import bourbon
 @import neat
+@import mixins
+@import normalize
+
+// Grid
+$column: 90px; //default 90px
+$grid-columns: 4; // default 12
+$max-width: em(1088); //default 1088
+
+// Breakpoints ===> +media($tablet)
+$desktop: new-breakpoint(min-width $max-width 12)
 
 
-// Random useless test css for compiler
-body
-	background-color: brown
-	div
-		background-color: blue
-	p
-		+span-columns(5)
-		opacity: 0.8
-		color: white
-	div
-		flex: initial //OH YES THANX PLEEEASE! I love u so much <3
-		background: #fff url() 0 0 no-repeat
-	strong
-		color: green
+// Typography
+$basefs: 16px
+$em-base: $basefs // Sets global base em size for the px-to-em and px-to-rem function. This should be the same size as your body font-size. Setting default is 16px.
+// minor third (1.2)
+$unit6: 2.488rem
+$unit5: 2.074rem
+$unit4: 1.728rem
+$unit3: 1.44rem
+$unit2: 1.2rem
+$unit1: 1.0rem
 
-		
+$titre: 'Varela Round', sans-serif
+=titre
+	font-family: $titre
+
+$corps: 'Lato', sans-serif
+=corps
+	font-family: $corps
+	font-weight: 400
+=corpsg
+	font-family: $corps
+	font-weight: 700
+=corpsgg
+	font-family: $corps
+	font-weight: 900
+
+// Colors
+$rouge: #EB3349
+$orange: #F45C43
+$blanc: #F5ECE1
+$terre: #45331E
+$ciel: #CCEBF1
+
+// Loaded fonts
+$font: 'Lato', sans-serif
+
+// Import layouts, pages & modules
+@import layouts/default
+@import partials/index
+@import partials/textSelect
