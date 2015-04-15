@@ -1,30 +1,30 @@
-# Synappcss
-Scientimagically compile jade/sass(bourbon/neat) &amp; optimise images with the help of gulp. Pleeease flavored.
+![Synappcss](http://i.imgur.com/Dl3C7h4.png)
+
+*Another front-end framework you don't really need...*
+
+# Synappcss : what is it?
+So... i putted jade/sass/bourbon/neat/pleeease/imageoptim/coffeescript & more together... Gulp do the work nicely but **i still need to improve it**. Just look at the package.json or the gulpfile if you want to know more or contribute.
+
+It's a personnal work, i do it with no intend to make it perfect, but if i do it well, i will be happy.
+
+As a French, i also intend to make a french alias to any sass/jade mixin i wrote. And even translate some famous bourbon/neat mixins to french. Easy to do.
+
+## Roadmap
+[Kanboard](http://kanboard.net/) powered, it's [here](http://wip.labo-css.fr/?controller=board&action=readonly&token=1a197b5dbf04656bd6573c6c8e318d489d586fdbcbbe7211ab3f8a534499). You can [open an issue](https://github.com/labo-css/Synappcss/issues/new) on this repository if you have any idea on how i can improve this micro framework. Especially on the gulpfile.
 
 ## CLI
+
+- **gulp** = default task (basically compile & optimise all the things)
+- **gulp watch** = same as gulp + browser-sync
 - **gulp clean:prod** = clean the prod folder (sometimes you will need this, trust me)
-- **gulp clean:dev** = just joking, are u a masochist?
+- **gulp clean:dev** = *just joking, are u a masochist?*
 - **gulp zip:prod** = zip the prod folder
 - **gulp zip:dev** = zip the dev folder
-- **gulp** = default task (sass, bourbon, neat, pleeease, jade, js, coffee, imgmin...)
 - **gulp img** = optimise pictures
-- **gulp watch** = same as gulp + browser-sync
-- I recommend using gulp watch in dev, and when launch using gulp clean:prod, gulp, gulp zip:prod
+- And some more for individual tasks (like gulp js or gulp coffee...)
 
-## To do :
-- Using Dploy if possible
-- gulp-notify if this is really necessary (not sure about that)
-- Understand better how npm packages are updated
-- MVC model with jade/sass (already working on that)
-- Making a doc for that, and aliases for mixins, in english & french
-- bat file to open Cmder & launch **gulp watch** immediatly
-- add special regognition of the framework for apps like wappalyzer (meta generator/special class... who know)
-- basic coffeescript for adding classes on click (for example)
-- making use of bower/yeoman (?)
-- Top bonus : wordpress version (maybe with the underscore theme)
-- better integration of https://github.com/JonathanWolfe/file-tree-exclude (for excluding some folders in brackets if u use it)
-- reformat & optimise the gulpfile.js (please help for that)
-- for example : merge the vanilla js with the compiler coffeescript without crashing everything
+- I recommend using gulp watch in dev, and when you want to go in prod use : gulp clean:prod & gulp & gulp zip:prod
+- If you have any idea on how to "do more" with my gulpfile, tell me. (things like dploy for example)
 
 ## Note :
 
@@ -36,5 +36,3 @@ OR: https://userstyles.org/styles/userjs/70979/GitHub%3A%20better-sized%20tabs%2
 Also, i'm french so if you are... ce ne sera pas la peine de s'embêter à parler anglais.
 
 Thats all !
-
-![Alt Text](http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif)
