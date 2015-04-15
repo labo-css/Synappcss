@@ -1,17 +1,17 @@
 //- The layout wrapper this page will use
 extends ../jade/layouts/default
 
-//- Override the default configuration file
-append config
-	- var PageTitle = "Index pagetitle"
-	- var MetaDesc = "Index metadesc"
+//- Page config, append to overwrite the default config of config.jade
+prepend config
+	- var PageTitle = "Home"
+	- var MetaDesc = "Synappcss, a framework you don't need"
 
 //- To add more stylesheets to this page, append some.
 append stylesheets
 
 //- Actual content ***********************************
 block content
-	h1 #{PageTitle}
+	h1.pagetitle #{PageTitle}
 	ul
 		li: a(href="") test
 		li: a(href="") test
