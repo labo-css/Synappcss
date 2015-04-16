@@ -2,3 +2,48 @@
 
 body
 	+outer-container
+	background-color: $red
+
+header
+	background-color: $earth
+	+span-columns(4)
+	+media($desktop)
+		+span-columns(12)
+		+omega
+	nav
+		+fill-parent
+	nav ul
+		+fill-parent
+		margin: 0
+		padding: 0
+	nav a
+		color: $white
+		text-decoration: none
+		line-height: 50px
+		
+	nav li
+		background-color: $earth
+		text-align: center
+		+span-columns(4)
+		+media($desktop)
+			+span-columns(3)
+
+.container
+	+span-columns(4)
+	+pad(2rem default 2rem default)
+	+omega
+	+media($desktop)
+		+span-columns(12)
+		+pad(2rem default 2rem default)
+		+omega
+	background-color: $white
+	+omega
+.pagetitle
+	margin: 0
+
+footer
+	background-color: $earth
+	p
+		margin: 0
+	p, a
+		color: $white
