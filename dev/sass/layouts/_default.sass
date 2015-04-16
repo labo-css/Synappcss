@@ -2,31 +2,40 @@
 
 body
 	+outer-container
-	background-color: $red
+	background-color: $sky
+	+media($desktop)
+		margin-top: 2rem
 
 header
-	background-color: $earth
+	background-color: $grey
 	+span-columns(4)
 	+media($desktop)
 		+span-columns(12)
 		+omega
 	nav
-		+fill-parent
 	nav ul
-		+fill-parent
 		margin: 0
 		padding: 0
-	nav a
-		color: $white
-		text-decoration: none
-		line-height: 50px
-		
+	nav li, nav a
+		transition: 0.2s
 	nav li
-		background-color: $earth
+		background-color: $grey
 		text-align: center
 		+span-columns(4)
 		+media($desktop)
 			+span-columns(3)
+		position: relative
+		&:hover, &:active
+			background-color: $white
+	nav a
+		color: $white
+		text-decoration: none
+		line-height: 50px
+		+coverlink
+		&:hover, &:active
+			color: $grey
+		
+
 
 .container
 	+span-columns(4)
@@ -42,7 +51,12 @@ header
 	margin: 0
 
 footer
-	background-color: $earth
+	+span-columns(4)
+	+media($desktop)
+		+span-columns(12)
+		+omega
+	background-color: $grey
+	+pad(2rem default 2rem default)
 	p
 		margin: 0
 	p, a
