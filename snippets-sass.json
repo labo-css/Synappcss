@@ -8,8 +8,17 @@
 			"shiftc": "+shift(${1:-1} of 12)",
 			"cf": "+clearfix",
 			"fillp": "+fill-parent",
-			"omeg": "+omega",
-			"desk": "+media($desktop)"
+			"omega": "+omega",
+			"desktop": "+media(\\$desktop)",
+			"tablet": "+media(\\$tablet)",
+			"mobile": "+media(\\$mobile)",
+			"modscale": "font-size: modular-scale(${1:1})",
+			"size": "+size()",
+			"position": "+position(absolute, ${1:0} null null null)",
+			"hidetext": "+hide-text",
+			"lineargradient": "+linear-gradient(to top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%)",
+			"radialgradient": "+radial-gradient(#1e5799, #3dc3d1)",
+			"zonel": "+zonelien"
 		}
 	}
 }
