@@ -16,7 +16,7 @@ As a French, i also intend to make a french alias to any sass/jade mixin i wrote
 
 - **gulp** = default task (basically compile & optimise all the things)
 - **gulp watch** = same as gulp + browser-sync
-- **gulp clean:prod** = clean the prod folder (sometimes you will need this, trust me)
+- **gulp clean:prod** = clean the prod folder
 - **gulp clean:dev** = *just joking, are u a masochist?*
 - **gulp zip:prod** = zip the prod folder
 - **gulp zip:dev** = zip the dev folder
