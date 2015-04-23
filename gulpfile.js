@@ -1,30 +1,11 @@
-// FUNCTIONS :
-// gulp clean:prod = clean the prod folder (sometimes you will need this, trust me)
-// gulp clean:dev = just joking, are u a masochist?
-// gulp zip:prod = zip the prod folder
-// gulp zip:dev = zip the dev folder
-// gulp = default task (sass, bourbon, neat, pleeease, jade, js, coffee, imgmin...)
-// gulp img = optimise pictures
-// gulp watch = same as gulp + browser-sync
-// I recommand using gulp watch in dev, and when launch using gulp clean:prod, gulp, gulp zip:prod
-
-// Include, ALL THE PLUGINS ! #derp #goreincoming #noshame
-
-var
-	gutil = require('gulp-util'),
-	del = require('del'),
-	zip = require('gulp-zip'),
-	gulp = require('gulp'),
-	jade = require('gulp-jade'),
-	sass = require('gulp-sass'),
-	neat = require('node-neat').includePaths,
-	pleeease = require('gulp-pleeease'),
-	coffee = require('gulp-coffee'),
-	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
-	imagemin = require('gulp-imagemin'),
-	browserSync = require('browser-sync'),
-	reload = browserSync.reload;
+var gulp = require('gulp');
+// lazy load only gulp-* related dependencies
+var plugins = require('gulp-load-plugins')();
+// load the rest
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+var del = require('del');
+var neat = require('node-neat').includePaths;
 
 // Trying to define some variables, sadly seems like i can't do it for dest folders (?) #plzhelp
 
@@ -46,13 +27,13 @@ gulp.task('clean:prod', function (cb){
 
 gulp.task('zip:prod', function (){
 	return gulp.src('prod/**')
-		.pipe(zip('prod.zip'))
+		.pipe(plugins.zip('prod.zip'))
 		.pipe(gulp.dest('.'));
 })
 
 gulp.task('zip:dev', function (){
 	return gulp.src('dev/**')
-		.pipe(zip('dev.zip'))
+		.pipe(plugins.zip('dev.zip'))
 		.pipe(gulp.dest('.'));
 })
 
@@ -60,7 +41,7 @@ gulp.task('zip:dev', function (){
 
 gulp.task('jade', function(){
 	return gulp.src('./dev/pages/**/*.jade')
-		.pipe(jade({
+		.pipe(plugins.jade({
 			pretty: true //jade is indeed pretty as hell
 		}))
 		.pipe(gulp.dest('./prod'))
@@ -70,13 +51,13 @@ gulp.task('jade', function(){
 
 gulp.task('sass', function(){
 	return gulp.src(source.sass)
-		.pipe(sass({
+		.pipe(plugins.sass({
 			indentedSyntax: true, // one syntax to rule them all, TABS MOTHERFUCKER!
 			errLogToConsole: true, // because u dont wanna crash on me gulp, even if you crash.
 			includePaths: require('node-bourbon').includePaths,
 			includePaths: ['sass'].concat(neat)
 		}))
-		.pipe(pleeease({
+		.pipe(plugins.pleeease({
 			autoprefixer: {
 				browsers: ['last 3 versions'] // because of retards who don't know how to internet
 			}
@@ -89,10 +70,10 @@ gulp.task('sass', function(){
 
 gulp.task('coffee', function(){
 	return gulp.src(source.coffee)
-		.pipe(coffee({
+		.pipe(plugins.coffee({
 			bare: true
 		}))
-		.pipe(concat('coffee.js'))
+		.pipe(plugins.concat('coffee.js'))
 		.pipe(gulp.dest('./prod/js'))
 		.pipe(reload({stream:true}));
 })
@@ -101,8 +82,8 @@ gulp.task('coffee', function(){
 
 gulp.task('js', function(){
 	return gulp.src(source.js)
-		.pipe(uglify({preserveComments: 'some'})) // Keep some comments, because why not
-		.pipe(concat('vanilla.js'))
+		.pipe(plugins.uglify({preserveComments: 'some'})) // Keep some comments, because why not
+		.pipe(plugins.concat('vanilla.js'))
 		.pipe(gulp.dest('./prod/js'))
 		.pipe(reload({stream:true}));
 })
@@ -111,7 +92,7 @@ gulp.task('js', function(){
 
 gulp.task('img', function() {
 	return gulp.src(source.img)
-		.pipe(imagemin({optimizationLevel: 7}))
+		.pipe(plugins.imagemin({optimizationLevel: 7}))
 		.pipe(gulp.dest('./prod/img'));
 })
 
@@ -133,7 +114,7 @@ gulp.task('bs-reload', function () {
 
 // Default Task
 
-gulp.task('default', ['jade', 'sass', 'coffee', 'js', 'img'], function(){})
+gulp.task('default', ['jade', 'sass', 'img', 'coffee', 'js'], function(){})
 
 // Watch da booty
 
