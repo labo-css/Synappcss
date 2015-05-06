@@ -121,23 +121,23 @@ gulp.task('default', ['jade', 'sass', 'img', 'coffee', 'js'], function(){})
 gulp.task('watch',['browser-sync'], function(){
 	gulp.watch(['./dev/pages/**/*.jade', './dev/jade/**/*.jade'], ['jade']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
-		gutil.log('This', gutil.colors.bgRed('JADE template'), 'look really cool!')
+		plugins.util.log('This', plugins.util.colors.bgRed('JADE template'), 'look really cool!')
 	})
 	gulp.watch('./dev/sass/**/*.sass', ['sass']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
-		gutil.log('SPANK MY', gutil.colors.bgBlue('SASS'), '! PLEEEASE!')
+		plugins.util.log('SPANK MY', plugins.util.colors.bgBlue('SASS'), '! PLEEEASE!')
 	})
 	gulp.watch('./dev/js/*.coffee', ['coffee']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
-		gutil.log('Dat', gutil.colors.yellow('COFFEESCRIPT'), '!')
+		plugins.util.log('Dat', plugins.util.colors.yellow('COFFEESCRIPT'), '!')
 	})
 	gulp.watch('./dev/js/*.js', ['js']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
-		gutil.log('Dat', gutil.colors.yellow('JS'), '!')
+		plugins.util.log('Dat', plugins.util.colors.yellow('JS'), '!')
 	})
 	gulp.watch('./dev/img/**/*.{png,jpg,gif,svg}', ['img']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
-		gutil.log('Dat', gutil.colors.green('pictures'), '!')
+		plugins.util.log('Dat', plugins.util.colors.green('pictures'), '!')
 	})
 	gulp.watch(['./prod/**/*.html', './prod/css/**/*.css', './prod/js/**/*.js'], ['bs-reload'])
 })
