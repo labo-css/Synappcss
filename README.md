@@ -2,7 +2,7 @@
 
 *Another front-end framework you don't really need...*
 
-*Quick update (8th july 2015) :* I recently switched to the SCSS syntax (not because i do not love the Sass syntax anymore, but because lazy people everywhere use SCSS because "I can just copy paste css into it, yaaay". So... i comply with the masses).
+**Quick update (8th july 2015) :** I recently switched to the SCSS syntax (not because i do not love the Sass syntax anymore, but because lazy people everywhere use SCSS because "I can just copy paste css into it, yaaay". So... i comply with the masses).
 I authorise you to bash me into hell for betray the Sass syntax. But you can still use it in your tpl files. This is just for the mixins/config. I do not commit the latest changes because i have a lot more to do and i'm not sure of the general direction of this framework, mainly because i use Kirby CMS now, i still use Jade but for low profile projects. Maybe i should split the jade code and the scss on two separate repos, maybe not. The gulp file is also a mess, if you have any suggestions, *it will be appreciated*.
 
 Thanx,
