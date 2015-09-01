@@ -1,0 +1,57 @@
+// Imports
+@import "mixins";
+@import "bourbon";
+@import "neat-helpers";
+@import "grid-settings";
+@import "neat";
+@import "normalize";
+
+// Colors
+$red: #d87373;
+$grey: #5f5f5f;
+$white: whitesmoke;
+$earth: #45331e;
+$sky: #6ad6f5;
+
+// Typography
+$basefs: 16px;
+$em-base: $basefs;
+
+// minor third (1.2)
+$unit6: 2.488rem;
+$unit5: 2.074rem;
+$unit4: 1.728rem;
+$unit3: 1.44rem;
+$unit2: 1.2rem;
+$unit1: 1rem;
+
+$titre: "Varela Round", sans-serif;
+
+// @mixin titre {
+// 	font-family: $titre;
+// }
+
+// $corps: "Lato", sans-serif;
+
+// @mixin corps {
+// 	font-family: $corps;
+// 	font-weight: 400;
+// }
+
+// @mixin corpsg {
+// 	font-family: $corps;
+// 	font-weight: 700;
+// }
+
+// @mixin corpsgg {
+// 	font-family: $corps;
+// 	font-weight: 900;
+// } // ECRIRE UN SYSTEME DE EXTENDS POUR LES FONTES (c'est simple)
+
+// Loaded fonts
+$font: "Lato", sans-serif;
+
+// Import layouts, pages & modules
+@import "layouts/default";
+@import "partials/index";
+@import "partials/textselection";

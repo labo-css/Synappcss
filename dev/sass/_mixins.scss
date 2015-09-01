@@ -1,0 +1,87 @@
+// A rajouter :
+// Positionnement, breakpoints, REM et EM.
+
+// Tips : Fonctions mix/tint/shade. Penser mobile first + http://iamsteve.me/blog/entry/sass-hints-tips-revisited (plugin breakpoints)
+
+// http://juicynex.us/juice/ http://gillesbertaux.com/andy/ http://breakpoint-sass.com/ (neat new-breakpoint?)
+
+// Taille d'un ├®l├®ment
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+// Faire un cercle
+@mixin cercle($size: 40px) {
+	width: $size;
+	height: $size;
+	border-radius: 100%;
+}
+
+@mixin circle($size: 40px) {
+	@include cercle($size: 40px);
+}
+
+// Clearfix
+@mixin clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Centrer un bloc
+@mixin centrer {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin center {
+	@include centrer;
+}
+
+// Couvrir un lien (sp├®cifier parent pos:rel)
+@mixin zonelien {
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+@mixin coverlink {
+	@include zonelien;
+}
+
+// Reset padding et margin
+@mixin reset {
+	padding: 0;
+	margin: 0;
+}
+
+// img replace
+@mixin textlogo {
+	text-indent: -8000px;
+	font-size: 0;
+	line-height: 0;
+}
+
+// coverimage
+@mixin coverimg($url, $xpos: 0, $ypos: 0) {
+	background: transparent url($url) $xpos ($ypos / cover) no-repeat;
+}
+
+// valign
+@mixin valign {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}

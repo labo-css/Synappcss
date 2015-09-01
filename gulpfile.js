@@ -12,7 +12,7 @@ var neat = require('node-neat').includePaths;
 var source = {
 	coffee: './dev/js/**/*.coffee',
 	js: './dev/js/**/*.js',
-	sass: './dev/sass/**/*.sass',
+	sass: './dev/sass/**/*.scss',
 	img: './dev/img/**/*.{png,jpg,gif,svg}'
 }
 
@@ -123,7 +123,7 @@ gulp.task('watch',['browser-sync'], function(){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
 		plugins.util.log('This', plugins.util.colors.bgRed('JADE template'), 'look really cool!')
 	})
-	gulp.watch('./dev/sass/**/*.sass', ['sass']).on('change', function(event){
+	gulp.watch('./dev/sass/**/*.scss', ['sass']).on('change', function(event){
 		console.log('ಠ_ಠ changes at ' + event.path + ' <==')
 		plugins.util.log('SPANK MY', plugins.util.colors.bgBlue('SASS'), '! PLEEEASE!')
 	})

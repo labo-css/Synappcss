@@ -1,0 +1,84 @@
+// Everything in there is broken as hell, will rework very soon.
+
+body {
+	@include outer-container;
+	background-color: $sky;
+	@include media($desktop) {
+		margin-top: 2rem;
+	}
+}
+
+header {
+	background-color: $grey;
+	@include span-columns(4);
+	@include media($desktop) {
+		@include span-columns(12);
+		@include omega;
+	}
+
+	nav {}
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	nav li, nav a {
+		transition: 0.2s;
+	}
+	nav li {
+		background-color: $grey;
+		text-align: center;
+		@include span-columns(4);
+		@include media($desktop) {
+			@include span-columns(3);
+		}
+
+		position: relative;
+		&:hover, &:active {
+			background-color: $white;
+		}
+	}
+	nav a {
+		color: $white;
+		text-decoration: none;
+		line-height: 50px;
+		@include coverlink;
+		&:hover, &:active {
+			color: $grey;
+		}
+	}
+}
+
+.container {
+	@include span-columns(4);
+	@include pad(2rem default 2rem default);
+	@include omega;
+	@include media($desktop) {
+		@include span-columns(12);
+		@include pad(2rem default 2rem default);
+		@include omega;
+	}
+
+	background-color: $white;
+	@include omega;
+}
+
+.pagetitle {
+	margin: 0;
+}
+
+footer {
+	@include span-columns(4);
+	@include media($desktop) {
+		@include span-columns(12);
+		@include omega;
+	}
+
+	background-color: $grey;
+	@include pad(2rem default 2rem default);
+	p {
+		margin: 0;
+	}
+	p, a {
+		color: $white;
+	}
+}
