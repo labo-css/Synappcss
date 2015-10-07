@@ -1,3 +1,6 @@
+# DEPRECATED! For now...
+I will rework this with using Postcss very soon. [note](https://www.youtube.com/watch?v=DXAdfXHES9k)
+
 ![Synappcss](http://i.imgur.com/Dl3C7h4.png)
 
 *Another front-end framework you don't really need...*
