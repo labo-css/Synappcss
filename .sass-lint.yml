@@ -13,7 +13,7 @@ rules:
 
   # Line Spacing
   one-declaration-per-line: 1
-  empty-line-between-blocks: 1
+  empty-line-between-blocks: 0
   single-line-per-selector: 1
 
   # Disallows
